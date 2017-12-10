@@ -21,7 +21,7 @@
         <div id="team">
             <ul class="list-unstyled text-center">
                 <li>
-                    <i class="fa fa-code" aria-hidden="true"></i>
+                    <i class="fa fa-code fa-3x" aria-hidden="true"></i>
                 </li>
                 <li>
                     <img src="https://avatars3.githubusercontent.com/u/33572957?s=400&u=d3b65d411451248e6f1f2cf877c157f7125e2514&v=4" class="img-circle"
@@ -316,8 +316,14 @@
         });
         $('#snippet-list .list-item').click(function () {
             var newActive = $(this);
-            $('#snippet-list .active').removeClass('active');
+            $('#snippet-list .list-item.active').removeClass('active');
             newActive.addClass('active');
+        });
+        $('#category-list li').click(function(event){
+            var newActive = $(this);
+            $('#category-list .active').removeClass('active');
+            newActive.addClass('active');
+            event.preventDefault();
         });
     </script>
 

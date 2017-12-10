@@ -57,7 +57,6 @@ a, a:hover, a:focus {
     color: #99A5AE;
     width: 70px;
     border-right: #273F52 1px solid;
-    font-size: 1.9em;
     min-height: 100vh;
     z-index: 1;
 }
