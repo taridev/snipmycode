@@ -308,18 +308,21 @@
 
     <script>
         $('input[type=radio]').css('display', 'none');
+
+        $('input[type=radio][name=label-color]').change(function () {
+            $('#custom-color').val($('input[name=label-color]:checked').val());
+        });
         $('#color-picker i').click(function () {
             var newActive = $(this);
             $('#color-picker .active').removeClass('active');
             newActive.addClass('active');
-            $('#custom-color').val($('input[name=label-color]:checked').val());
         });
         $('#snippet-list .list-item').click(function () {
             var newActive = $(this);
             $('#snippet-list .list-item.active').removeClass('active');
             newActive.addClass('active');
         });
-        $('#category-list li').click(function(event){
+        $('#category-list li').click(function (event) {
             var newActive = $(this);
             $('#category-list .active').removeClass('active');
             newActive.addClass('active');
