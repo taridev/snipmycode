@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snip My Code</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/color.css">
+
+    <meta charset="utf-8">
+
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <div id="team">
+            <ul class="list-unstyled text-center">
+                <li>
+                    <i class="fa fa-code" aria-hidden="true"></i>
+                </li>
+                <li>
+                    <img src="https://avatars3.githubusercontent.com/u/33572957?s=400&u=d3b65d411451248e6f1f2cf877c157f7125e2514&v=4" class="img-circle"
+                        alt="">
+                </li>
+            </ul>
+        </div>
+
+        <nav id="sidebar">
+
+            <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="" class="article">New Snippet</a>
+                </li>
+            </ul>
+
+            <ul id="category-list" class="list-unstyled components">
+                <li class="active">
+                    <a class="list" href="">
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>All Snippets</a>
+                </li>
+                <li>
+                    <a class="star" href="">
+                        <i class="fa fa-star" aria-hidden="true"></i>Starred</a>
+                </li>
+                <li>
+                    <a class="tag" href="">
+                        <i class="fa fa-tag" aria-hidden="true"></i>Unlabeled</a>
+                </li>
+            </ul>
+
+            <h3>Labels
+                <a href="" data-toggle="modal" data-target="#newlabel-modal">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                </a>
+            </h3>
+
+            <ul id="label-list" class="list-unstyled components labels">
+                <li>
+                    <a href="">
+                        <i class="dodgerblue fa fa-circle" aria-hidden="true"></i>C++</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="yellow fa fa-circle" aria-hidden="true"></i>Javascript</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="limegreen fa fa-circle" aria-hidden="true"></i>python</a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="orangered fa fa-circle" aria-hidden="true"></i>html 5</a>
+                </li>
+            </ul>
+
+            <h3>Languages</h3>
+
+            <ul id="language-list" class="list-unstyled components languages">
+                <li>
+                    <a href="#">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>C++
+                    </a>
+
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>Javascript
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>python
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-hashtag" aria-hidden="true"></i>html 5
+                    </a>
+                </li>
+            </ul>
+
+        </nav>
+        <!-- /SIDEBAR -->
+
+        <!-- SNIPPET LIST -->
+        <div id="snippet-list">
+
+            <ul class="list-unstyled components">
+                <li class="header">
+                    <div class="dropdown">
+                        <h3>Sort By</h3>
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">Recently created
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="active">
+                                <a href="#">Recently created</a>
+                            </li>
+                            <li>
+                                <a href="#">Last update</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- /SNIPPET LIST -->
+
+        <!-- Modal -->
+        <div class="modal" id="newlabel-modal" tabindex="-1" role="dialog" aria-labelledby="newlabel-modal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h5 class="modal-title" id="newlabel-modal-label">New Label</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form action="." method="get">
+                            <div class="form-group">
+                                <label for="label-name">Label Title</label>
+                                <span>45 chars max</span>
+                                <input type="text" class="form-control" name="label-name" id="label-name" placeholder="e.g. Dev Ops">
+                            </div>
+                            <h5>Choose a color</h5>
+                            <div id="color-picker">
+                                <input type="radio" value="orangered" name="label-color" id="orangered">
+                                <label for="orangered">
+                                    <i class="orangered active fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="deeppink" name="label-color" id="deeppink">
+                                <label for="deeppink">
+                                    <i class="deeppink fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="mediumorchide" name="label-color" id="mediumorchide">
+                                <label for="mediumorchide">
+                                    <i class="mediumorchide fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="slateblue" name="label-color" id="slateblue">
+                                <label for="slateblue">
+                                    <i class="slateblue fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="dodgerblue" name="label-color" id="dodgerblue">
+                                <label for="dodgerblue">
+                                    <i class="dodgerblue fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="skyblue" name="label-color" id="skyblue">
+                                <label for="skyblue">
+                                    <i class="skyblue fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="lightseagreen" name="label-color" id="lightseagreen">
+                                <label for="lightseagreen">
+                                    <i class="lightseagreen fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="limegreen" name="label-color" id="limegreen">
+                                <label for="limegreen">
+                                    <i class="limegreen fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="yellowgreen" name="label-color" id="yellowgreen">
+                                <label for="yellowgreen">
+                                    <i class="yellowgreen fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="khaki" name="label-color" id="khaki">
+                                <label for="khaki">
+                                    <i class="khaki fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="yellow" name="label-color" id="yellow">
+                                <label for="yellow">
+                                    <i class="yellow fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="moccassin" name="label-color" id="moccassin">
+                                <label for="moccassin">
+                                    <i class="moccassin fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="lightsalmon" name="label-color" id="lightsalmon">
+                                <label for="lightsalmon">
+                                    <i class="lightsalmon fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="orange" name="label-color" id="orange">
+                                <label for="orange">
+                                    <i class="orange fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="sienna" name="label-color" id="sienna">
+                                <label for="sienna">
+                                    <i class="sienna fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="turquoise" name="label-color" id="turquoise">
+                                <label for="turquoise">
+                                    <i class="turquoise fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="lightsteelblue" name="label-color" id="lightsteelblue">
+                                <label for="lightsteelblue">
+                                    <i class="lightsteelblue fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                                <input type="radio" value="lavender" name="label-color" id="lavender">
+                                <label for="lavender">
+                                    <i class="lavender fa fa-circle" aria-hidden="true"></i>
+                                </label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="custom-color" id="custom-color" placeholder="Custom color in hex (e.g. af70bb)">
+                            </div>
+                            <input type="submit" class="form-control article" name="save">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery CDN -->
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap Js CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script>
+        $('input[type=radio]').css('display', 'none');
+        $('#color-picker i').click(function () {
+            var newActive = $(this);
+            $('#color-picker .active').removeClass('active');
+            newActive.addClass('active');
+            $('#custom-color').val($('input[name=label-color]:checked').val());
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+/*
+    DEMO STYLE
+*/
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    background: #fafafa;
+    height: 100%;
+}
+
+p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a, a:hover, a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.15s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+    display: flex;
+    align-items: stretch;
+}
+
+#team {
+    background: #152E43;
+    color: #99A5AE;
+    width: 70px;
+    border-right: #273F52 1px solid;
+    font-size: 1.9em;
+    min-height: 100vh;
+    z-index: 1;
+}
+
+#team img {
+    width: 40px;
+}
+
+#team li {
+    margin: 20px 0;
+}
+
+
+#sidebar {
+    min-height: 100vh;
+    min-width: 220px;
+    max-width: 220px;
+    background: #152E43;
+    color: #fff;
+    transition: all 0.15s;
+    z-index: 0;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #152E43;
+}
+
+#sidebar h3 {
+    font-size: 1em;
+    text-transform: uppercase;
+    padding: 0 10px;
+    color: #a2acb5;
+    margin-bottom: 0;
+}
+
+#sidebar h3 a {
+    display: block;
+    float: right;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 7px 10px;
+    font-size: 0.9em;
+    display: block;
+}
+
+#sidebar li.active {
+    border-left: #11B683 2px solid;
+    background: #091822;
+}
+
+#sidebar #label-list a i.fa, #sidebar #category-list a i.fa, #sidebar #language-list a i.fa{
+    display: inline-block;
+    padding-right: 10px;
+}
+
+#sidebar ul li a:hover {
+    color: #fff;
+    background: #0E212F;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+    display: block;
+    position: absolute;
+    right: 20px;
+    /* font-family: 'Glyphicons Halflings'; */
+    font-size: 0.6em;
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+}
+
+ul.CTAs {
+    padding: 20px 20px 0;
+}
+
+ul.CTAs a {
+    text-align: center;
+    font-size: 0.95em !important;
+    font-weight: bold;
+    display: block;
+    border-radius: 3px;
+}
+
+a.article, input.article {
+    background: #11B683 !important;
+    color: #fff !important;
+    text-transform: uppercase;
+}
+
+a.article:hover, input.article:hover {
+    background: #0d8761 !important;
+}
+
+/* ---------------------------------------------------
+    MODALS
+ ----------------------------------------------------- */
+#newlabel-modal .modal-dialog {
+     width: 250px;
+}
+
+#newlabel-modal .form-group label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #777;
+}
+
+#newlabel-modal [placeholder] {
+    font-size: 0.8em;
+}
+
+
+/* ---------------------------------------------------
+    COLOR PICKER
+ ----------------------------------------------------- */
+#color-picker {
+    font-size: 1.6em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+#color-picker .active {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 0.13em 0.2em;
+    font-size: 70%;
+}
+#color-picker * {
+    display: block;
+    margin: 1px;
+}
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+#content {
+    min-height: 100vh;
+    min-width: 100vh;
+    transition: all 0.3s;
+    border: 1px solid;
+}
+
+/* ---------------------------------------------------
+    SNIPPET LIST STYLE
+----------------------------------------------------- */
+#snippet-list {
+    margin: 0;
+    min-width: 275px;
+    width: 275px;
+    padding: 0;
+    min-height: 100vh;
+    border-right: 1px #D5D5D5 solid;
+}
+
+#snippet-list .header {
+    background: #F3F3F3;
+    margin: 0;
+    padding: 10px 15px 2px;
+    display: flex;
+    font-size: 0.9em;
+    line-height: 0.9em;
+}
+
+#snippet-list .header, #snippet-list .list-item {
+    border-bottom: 1px #D5D5D5 solid;
+    margin-top:
+}
+
+#snippet-list h3 {
+    color: #999999;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#snippet-list li a{
+    padding: 6px 0;
+    display: block;
+}
+
+#snippet-list li.active {
+    border-left: #11B683 3px solid;
+}
+
+#snippet-list li.active a{
+    background: inherit !important;
+    color: #11B683 !important;
+    font-weight: bold;
+}
+
+#snippet-list li a {
+    font-weight: bold;
+    color: #555555;
+}
+
+#snippet-list li a:hover, #snippet-list li.active a:hover {
+    color: #555555;
+    background: #F3F3F3 !important;
+}
+
+#snippet-list .list-item {
+    padding-left: 50px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+}
+
+#snippet-list .list-item:hover {
+    background: #f3f3f3;
+}
+
+#snippet-list .list-item.active {
+    background: #f3f3f3;
+    box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-left-width: 5px;
+    padding-top: 10px;
+    padding-left: 45px;
+}
+
+#snippet-list .list-item img{
+    width: 20px;
+    float: right;
+}
+
+#snippet-list .list-item h4 {
+    font-size: 0.9em;
+}
+
+#snippet-list .list-item p {
+    font-size: 0.8em;
+    text-align: justify;
+    width: 155px;
+}
+
+.labels {
+    font-size: 12px;
+    line-height: 18px;
+    color: #333;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.snippet-label {
+    display: inline-block;
+    margin: 0 5px 5px 0;
+    border-radius: 3px;
+    border: 1px solid #d5d5d5;
+    background: #eee;
+}
+
+.s-label-color {
+    width: 5px;
+    height: calc(100% + 1px);
+    float: left;
+    margin-left: -6px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+
+}
+
+.s-label-name {
+    /* margin-top: -10px; */
+    margin-left: 5px;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -220px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+}
